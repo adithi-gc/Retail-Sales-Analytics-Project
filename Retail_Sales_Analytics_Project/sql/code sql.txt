@@ -1,0 +1,20 @@
+SELECT SUM(sales) AS total_sales
+FROM dataset;
+
+SELECT customer_name,
+SUM(sales) AS total_sales
+FROM dataset
+GROUP BY customer_name
+ORDER BY total_sales DESC
+LIMIT 5;
+
+SELECT category,
+SUM(profit) AS total_profit
+FROM dataset
+GROUP BY category
+ORDER BY total_profit DESC;
+
+SELECT region,
+SUM(sales) AS total_sales
+FROM dataset
+GROUP BY region;
